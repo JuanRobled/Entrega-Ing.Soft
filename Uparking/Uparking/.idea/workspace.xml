@@ -5,8 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e098b0-d6f4-4b53-b75c-dc0a10a86334" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/GenerateReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/GenerateReceipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/ShowReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/ShowReceiptController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entrega2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uparking.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Entrega1-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Entrega2-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/Uparking-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/conf/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/controller/InicioSesionController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/controller/RegistroUsuarioController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/controller/RegistroVehiculoController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/model/Cuenta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/model/Vehiculo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/InicioSesion.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/Launcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/Menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/RegisterValet.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/RegistroUsuario.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/RegistroVehiculo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/ShowValetAssigned.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/SignInAdmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/User.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/icons/admin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/icons/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/icons/location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/icons/logo-upark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega1/view/icons/valet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/aplicacion/agregados/AdministratorController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/aplicacion/agregados/MenuController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/aplicacion/agregados/ShowValetController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/aplicacion/agregados/SignInAdminController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/aplicacion/ports/Infra/manage/IState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/aplicacion/ports/Infra/persistencia/IAdminDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/aplicacion/ports/Infra/persistencia/ICuentasDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/aplicacion/ports/Infra/persistencia/IValetDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/encriptacion/ConfigFileEncryption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/encriptacion/Encryption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/entidades/entities/Administrator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/entidades/entities/AssignValet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/entidades/entities/Available.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/entidades/entities/InService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/entidades/entities/ValetParking.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/entidades/enums/ValetEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/infraestructura/oracle/AdminDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/infraestructura/oracle/ConnectionDB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/infraestructura/oracle/CuentasDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entrega2/co/uparking/solid/clean/infraestructura/oracle/ValetDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/original-Entrega2-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuentas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cuentas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shade/Uparking.jar" beforeDir="false" afterPath="$PROJECT_DIR$/shade/Uparking.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega1/controller/InicioSesionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega1/controller/InicioSesionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega1/controller/RegistroUsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega1/controller/RegistroUsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega1/controller/RegistroVehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega1/controller/RegistroVehiculoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega1/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega1/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega1/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega1/model/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega1/view/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega1/view/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/AdministratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/ShowValetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/ShowValetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/SignInAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/agregados/SignInAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/ports/Infra/manage/IState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/ports/Infra/manage/IState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/ports/Infra/persistencia/IValetDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/aplicacion/ports/Infra/persistencia/IValetDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/entidades/entities/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/entidades/entities/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/entidades/entities/AssignValet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/entidades/entities/AssignValet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/entidades/entities/ValetParking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/entidades/entities/ValetParking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/infraestructura/oracle/CuentasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/infraestructura/oracle/CuentasDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/infraestructura/oracle/ValetDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrega2/co/uparking/solid/clean/infraestructura/oracle/ValetDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/entrega1/view/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entrega1/view/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/entrega1/view/User.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entrega1/view/User.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -29,11 +29,14 @@ public class Cuenta {
         this.password = password;
     }
 
+<<<<<<< HEAD
     public boolean validateEmail(String email) {
         String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
         return email.matches(regex);
     }
 
+=======
+>>>>>>> main
     public String getUser() {
         return user;
     }
@@ -82,5 +85,19 @@ public class Cuenta {
         this.ID = ID;
     }
 
+<<<<<<< HEAD
 
+=======
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "ID=" + ID +
+                ", user='" + user + '\'' +
+                ", tipoDoc='" + tipoDoc + '\'' +
+                ", document=" + document +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+>>>>>>> main
 }

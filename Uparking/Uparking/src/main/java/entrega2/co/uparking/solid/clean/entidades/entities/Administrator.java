@@ -3,9 +3,12 @@ package entrega2.co.uparking.solid.clean.entidades.entities;
 import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IValetDAO;
 import entrega2.co.uparking.solid.clean.infraestructura.oracle.ValetDAO;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
+=======
+>>>>>>> main
 public class Administrator implements IValetDAO {
 
     private int id;
@@ -15,11 +18,15 @@ public class Administrator implements IValetDAO {
     @Override
     public boolean insertValet(ValetParking valet) {
 
+<<<<<<< HEAD
         boolean insert = false;
+=======
+>>>>>>> main
         IValetDAO valetDAO = new ValetDAO();
 
         if(valetDAO.insertValet(valet))
         {
+<<<<<<< HEAD
             insert = true;
         }
         return insert;
@@ -45,6 +52,11 @@ public class Administrator implements IValetDAO {
         }
 
         return delete;
+=======
+            return true;
+        }
+        return false;
+>>>>>>> main
     }
 
 

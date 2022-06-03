@@ -4,6 +4,7 @@ Cuenta{ID=0, user='Cata', tipoDoc='Cédula de Ciudadanía', document=1010555555,
 Cuenta{ID=0, user='Ana', tipoDoc='Cédula de Ciudadanía', document=1010325265, email='ana@hormail.com', password='Ana'}
 Cuenta{ID=0, user='Carlos4', tipoDoc='Cédula de Ciudadanía', document=1010658467, email='carlos@gmail.com', password='Carlos'}
 Cuenta{ID=0, user='Pedro', tipoDoc='Cédula de Ciudadanía', document=1010258164, email='pedro@gmail.com', password='pedro'}
+<<<<<<< HEAD
 Cuenta{ID=0, user='Juan04', tipoDoc='Cedula de Ciudadania', document=1010960197, email='juanito@gmail.com', password='juan04'}
 entrega1.model.Cuenta@3930015a
 entrega1.model.Cuenta@3930015a
@@ -15,3 +16,5 @@ entrega1.model.Cuenta@20f5281c
 entrega1.model.Cuenta@25f4878b
 entrega1.model.Cuenta@3e2059ae
 entrega1.model.Cuenta@20f5281c
+=======
+>>>>>>> main

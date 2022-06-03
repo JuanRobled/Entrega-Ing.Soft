@@ -1,5 +1,6 @@
 package entrega2.co.uparking.solid.clean.aplicacion.agregados;
 
+<<<<<<< HEAD
 import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IAdminDAO;
 import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IValetDAO;
 import entrega2.co.uparking.solid.clean.entidades.entities.Administrator;
@@ -7,6 +8,11 @@ import entrega2.co.uparking.solid.clean.entidades.entities.AssignValet;
 import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
 import entrega2.co.uparking.solid.clean.infraestructura.oracle.AdminDAO;
 import entrega2.co.uparking.solid.clean.infraestructura.oracle.ValetDAO;
+=======
+import entrega2.co.uparking.solid.clean.entidades.entities.Administrator;
+import entrega2.co.uparking.solid.clean.entidades.entities.AssignValet;
+import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
+>>>>>>> main
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,9 +24,12 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
+<<<<<<< HEAD
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
+=======
+>>>>>>> main
 import java.util.ResourceBundle;
 
 public class AdministratorController implements Initializable {
@@ -34,11 +43,16 @@ public class AdministratorController implements Initializable {
     public Button btnLeave;
 
     private boolean accepted = false;
+<<<<<<< HEAD
     private boolean exists = false;
 
     List<ValetParking> listValets = new ArrayList<>();
 
     private final Administrator manageValet = new Administrator();
+=======
+
+    private final Administrator valets = new Administrator();
+>>>>>>> main
     private final AssignValet assign = new AssignValet();
 
     @Override
@@ -53,6 +67,7 @@ public class AdministratorController implements Initializable {
             if(!txtValetName.getText().isEmpty() && !txtDocNum.getText().isEmpty() && !txtAge.getText().isEmpty() &&
                     !txtExp.getText().isEmpty()){
 
+<<<<<<< HEAD
                     if(txtValetName.getText().length()>=10 && txtValetName.getText().length()<=20){
 
                         listValets = manageValet.checkAccount();
@@ -77,6 +92,9 @@ public class AdministratorController implements Initializable {
                             alert.showAndWait();
 
                         }
+=======
+                    if(txtValetName.getText().length()>=10){
+>>>>>>> main
 
                             ValetParking valet = new ValetParking();
                             valet.setName(txtValetName.getText());
@@ -96,6 +114,7 @@ public class AdministratorController implements Initializable {
 
                             }
 
+<<<<<<< HEAD
 
                              assign.getValets().add(valet);
 
@@ -118,13 +137,41 @@ public class AdministratorController implements Initializable {
                             alert.setContentText("No se pudo agregar el valet!");
                             alert.showAndWait();
                         }
+=======
+                             assign.getValets().add(valet);
+
+
+                            if(valets.insertValet(valet) && accepted){
+
+                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                                alert.setHeaderText(null);
+                                alert.setTitle("OPERACIÓN ÉXITOSA");
+                                alert.setContentText("El valet ha sido registrado de manera éxitosa");
+                                alert.showAndWait();
+
+                                cleanFields();
+
+
+                            }else {
+
+                                Alert alert = new Alert(Alert.AlertType.ERROR);
+                                alert.setHeaderText(null);
+                                alert.setTitle("ERROR");
+                                alert.setContentText("No se pudo agregar el valet!");
+                                alert.showAndWait();
+                            }
+>>>>>>> main
 
                     }else{
 
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setHeaderText(null);
                         alert.setTitle("ERROR");
+<<<<<<< HEAD
                         alert.setContentText("El Nombre de usuario debe contener al menos veinte caracteres");
+=======
+                        alert.setContentText("El Nombre de usuario debe contener al menos quince caracteres");
+>>>>>>> main
                         alert.showAndWait();
                     }
 

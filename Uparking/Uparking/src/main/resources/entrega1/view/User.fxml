@@ -48,11 +48,14 @@
                   </Button>
                </children>
             </HBox>
+<<<<<<< HEAD
             <Button fx:id="btnAdmin" mnemonicParsing="false" onAction="#EnterAdmin" prefHeight="10.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Admin" textFill="WHITE">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
             </Button>
+=======
+>>>>>>> main
          </children>
       </VBox>
       <StackPane fx:id="containerForm" prefHeight="337.0" prefWidth="211.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />

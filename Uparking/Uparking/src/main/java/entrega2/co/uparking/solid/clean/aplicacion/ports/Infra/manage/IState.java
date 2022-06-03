@@ -4,5 +4,9 @@ import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
 import entrega2.co.uparking.solid.clean.entidades.enums.ValetEnum;
 
 public interface IState {
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     public void changeState(ValetParking valet);
 }

@@ -15,8 +15,13 @@ public class ShowValetController {
     public Button btnLeave;
     public TextField txtNameValet;
 
+<<<<<<< HEAD
 
     ShowValetController stage2;
+=======
+    ShowValetController stage2;
+
+>>>>>>> main
     ValetParking valet;
 
 
@@ -40,6 +45,9 @@ public class ShowValetController {
         txtAge.setEditable(false);
         txtExp.setText(this.valet.getExperience());
         txtExp.setEditable(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
     }
 }
