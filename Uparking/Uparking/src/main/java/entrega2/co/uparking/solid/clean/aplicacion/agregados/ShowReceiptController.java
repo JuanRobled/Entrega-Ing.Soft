@@ -23,8 +23,8 @@ public class ShowReceiptController {
 
     private DateTimeFormatter datePayment;
     private final String pay = "$20.000";
-    Cuenta user;
-    ShowReceiptController stage2;
+    Private Cuenta user;
+    Private ShowReceiptController stage2;
 
 
 

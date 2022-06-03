@@ -52,7 +52,7 @@ public class GenerateReceipt implements IPayment {
             contentStream.beginText();
             contentStream.setFont(PDType1Font.TIMES_BOLD, 12);
             contentStream.newLineAtOffset(20, page.getMediaBox().getHeight() - 146);
-            contentStream.showText("Nombre: ");
+            contentStream.showText("Usuario: ");
             contentStream.endText();
 
             contentStream.beginText();
@@ -76,7 +76,7 @@ public class GenerateReceipt implements IPayment {
             contentStream.beginText();
             contentStream.setFont(PDType1Font.TIMES_BOLD, 12);
             contentStream.newLineAtOffset(20, page.getMediaBox().getHeight() - 206);
-            contentStream.showText("Numero del documento: ");
+            contentStream.showText("Numero de documento: ");
             contentStream.endText();
 
             contentStream.beginText();
