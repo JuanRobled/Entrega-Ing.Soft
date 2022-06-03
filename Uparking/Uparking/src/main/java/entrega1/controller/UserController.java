@@ -6,13 +6,25 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+<<<<<<< HEAD
+import javafx.scene.Scene;
+=======
+>>>>>>> main
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.fxml.Initializable;
+<<<<<<< HEAD
+import javafx.stage.Stage;
 
 public class UserController implements Initializable{
 
+    public Button btnAdmin;
+=======
+
+public class UserController implements Initializable{
+
+>>>>>>> main
     @FXML
     private Button btnSesion, btnRegistrarse;
     
@@ -53,9 +65,26 @@ public class UserController implements Initializable{
         
     }    
     
+<<<<<<< HEAD
+    @FXML
+    private VBox loadForm(String url) throws IOException{    
+        return (VBox) FXMLLoader.load(getClass().getResource(url));    
+    }
+
+    @FXML
+    public void EnterAdmin(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/entrega1/view/SignInAdmin.fxml"));
+        Scene scene = new Scene(loader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+=======
    
     private VBox loadForm(String url) throws IOException{    
         return (VBox) FXMLLoader.load(getClass().getResource(url));    
     }
     
+>>>>>>> main
 }

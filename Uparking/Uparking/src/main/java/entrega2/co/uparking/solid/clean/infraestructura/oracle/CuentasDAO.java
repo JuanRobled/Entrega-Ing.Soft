@@ -13,7 +13,12 @@ public class CuentasDAO implements ICuentasDAO {
 
         boolean state = false;
 
+<<<<<<< HEAD
+        String SQL = "INSERT INTO usuarios (usuario, tipo_documento," +
+                "numero_documento, email, pass)" + " VALUES (?, ?, ?, ? ,?)";
+=======
         String SQL = "INSERT INTO usuarios (usuario, tipo_documento, numero_documento, email, pass) VALUES (?, ?, ?, ? ,?)";
+>>>>>>> main
         try (
                 Connection conex = DriverManager.getConnection(
                         ConnectionDB.getInstance().encrip.getThinconn(),
@@ -37,7 +42,12 @@ public class CuentasDAO implements ICuentasDAO {
 
     public List<Cuenta> checkAccount() {
         List<Cuenta> cuentas = new ArrayList<>();
+<<<<<<< HEAD
+        String SQL = "select ID, usuario, tipo_documento, numero_documento" +
+                ", email, pass from usuarios";
+=======
         String SQL = "select ID, usuario, tipo_documento, numero_documento, email, pass from usuarios";
+>>>>>>> main
         try {
                 Connection conex = DriverManager.getConnection(
                         ConnectionDB.getInstance().encrip.getThinconn(),

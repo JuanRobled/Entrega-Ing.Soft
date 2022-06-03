@@ -17,6 +17,25 @@ public class AssignValet {
 
     public ValetParking associateValet(Cuenta user){
 
+<<<<<<< HEAD
+        boolean asg = false;
+        ValetParking v = new ValetParking();
+        ValetDAO valet = new ValetDAO();
+        valets = valet.checkAccount();
+        InService service = new InService();
+        if(!asg) {
+            v = valets.get(0);
+            assigned.put(user, v);
+            service.changeState(v);
+            asg = true;
+
+        }
+        if(asg){
+            valets.remove(v);
+        }
+
+       return v;
+=======
         ValetDAO valet = new ValetDAO();
         valets = valet.checkAccount();
         InService service = new InService();
@@ -25,6 +44,7 @@ public class AssignValet {
         valets.remove(0);
 
        return valets.get(0);
+>>>>>>> main
     }
 
     public Map<Cuenta, ValetParking> getAssigned() {

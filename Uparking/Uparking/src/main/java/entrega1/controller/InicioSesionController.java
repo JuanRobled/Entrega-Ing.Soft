@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
+>>>>>>> main
 package entrega1.controller;
 
 import entrega1.model.Cuenta;
@@ -14,15 +17,23 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * FXML Controller class
+<<<<<<< HEAD
+ * Manage the login of the system users
+ * @author Juan Esteban Urquijo
+=======
  *
  * @author Juan Urquijo
+>>>>>>> main
  */
 public class InicioSesionController{
 
@@ -35,21 +46,48 @@ public class InicioSesionController{
     @FXML
     private Button btnLimpiarIng;
 
+<<<<<<< HEAD
+    private List<Cuenta> cuentas = new ArrayList<>();
+    private ICuentasDAO model = new CuentasDAO();
+    private MenuController menu;
+=======
 
     List<Cuenta> cuentas = new ArrayList<>();
     ICuentasDAO model = new CuentasDAO();
     boolean encontrada = false;
 
     MenuController menu;
+>>>>>>> main
 
 
     @FXML
     public void IniciarSesion(ActionEvent actionEvent) throws IOException {
 
+<<<<<<< HEAD
+        boolean encontrada = false;
+=======
+>>>>>>> main
         Object evt = actionEvent.getSource();
 
         if(btnIngresar.equals(evt)) {
 
+<<<<<<< HEAD
+            if((!txtUsuario.getText().isEmpty()) &&
+                    (!txtPassword.getText().isEmpty())) {
+                cuentas = model.checkAccount();
+
+                if(cuentas != null) {
+
+                    for (Cuenta c: cuentas) {
+                          if((c.getUser().equals(txtUsuario.getText())) &&
+                                  (c.getPassword().equals(txtPassword.getText()))) {
+
+                              encontrada = true;
+                              FXMLLoader loader = new FXMLLoader(getClass().
+                                      getResource("/entrega1/view/Menu.fxml"));
+                              Scene scene = new Scene(loader.load());
+                              MenuController controlador = loader.getController();
+=======
             if(!txtUsuario.getText().isEmpty() && !txtPassword.getText().isEmpty())
             {
                 cuentas = model.checkAccount();
@@ -64,24 +102,39 @@ public class InicioSesionController{
                               FXMLLoader loader = new FXMLLoader(getClass().getResource("/entrega1/view/Menu.fxml"));
                               Scene scene = new Scene(loader.load());
                               MenuController controlador = (MenuController) loader.getController();
+>>>>>>> main
                               controlador.receiveparameters(menu, c);
                               Stage stage = new Stage();
                               stage.setScene(scene);
                               stage.show();
                               cleanFields();
                               break;
+<<<<<<< HEAD
+
+                          }
+                    }
+
+                    if(encontrada) {
+
+=======
                           }
                     }
 
                     if(encontrada){
+>>>>>>> main
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setHeaderText(null);
                         alert.setTitle("Información");
                         alert.setContentText("¡BIENVENIDO!");
                         alert.showAndWait();
 
+<<<<<<< HEAD
+
+                    }else {
+=======
                         encontrada = false;
                     }else{
+>>>>>>> main
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setHeaderText(null);
                         alert.setTitle("ERROR");
@@ -91,7 +144,11 @@ public class InicioSesionController{
                     }
                 }
             }
+<<<<<<< HEAD
+        }else {
+=======
         }else{
+>>>>>>> main
            cleanFields();
         }
     }
@@ -100,6 +157,20 @@ public class InicioSesionController{
 
     @FXML
     public void limpiarCampos(ActionEvent actionEvent) {
+<<<<<<< HEAD
+
+        if(btnLimpiarIng.equals(actionEvent.getSource())) {
+            cleanFields();
+        }
+
+    }
+
+    public void cleanFields() {
+
+        txtUsuario.setText("");
+        txtPassword.setText("");
+
+=======
         if(btnLimpiarIng.equals(actionEvent.getSource())){
             cleanFields();
         }
@@ -108,5 +179,6 @@ public class InicioSesionController{
     public void cleanFields(){
         txtUsuario.setText("");
         txtPassword.setText("");
+>>>>>>> main
     }
 }

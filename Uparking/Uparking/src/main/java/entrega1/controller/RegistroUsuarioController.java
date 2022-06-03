@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+package entrega1.controller;
+
+import entrega1.model.Cuenta;
+import entrega2.co.uparking.solid.clean.infraestructura.oracle.CuentasDAO;
+import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.input.KeyEvent;
+
+=======
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
 package entrega1.controller;
 
+>>>>>>> main
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,6 +25,14 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+<<<<<<< HEAD
+/**
+ * FXML class RegistroUsuarioController
+ * Manage the register of the system users
+ * @author Juan Esteban Urquijo
+ */
+
+=======
 import entrega1.model.Cuenta;
 import entrega2.co.uparking.solid.clean.infraestructura.oracle.CuentasDAO;
 import javafx.collections.FXCollections;
@@ -31,10 +53,21 @@ import javafx.scene.layout.VBox;
  *
  * @author JuanEurquijo
  */
+>>>>>>> main
 public class RegistroUsuarioController implements Initializable{
     
     @FXML
     private TextField txtNombreUsuario,txtCorreo;
+<<<<<<< HEAD
+    @FXML
+    private ComboBox<String> cbTipoDocumento;
+    @FXML
+    private Button btnRegistrar, btnLimpiarReg;
+    @FXML
+    private TextField txtNumDocumento;
+    @FXML
+    private CheckBox checkViewPass;
+=======
     
     @FXML
     private ComboBox<String> cbTipoDocumento;
@@ -50,6 +83,7 @@ public class RegistroUsuarioController implements Initializable{
     @FXML
     private CheckBox checkViewPass;
     
+>>>>>>> main
     @FXML
     private PasswordField txtPassword;
     @FXML
@@ -58,6 +92,17 @@ public class RegistroUsuarioController implements Initializable{
     private PasswordField txtConfirmPassword;
     @FXML
     private TextField txtConfirmPasswordMask;
+<<<<<<< HEAD
+    private ArrayList<Cuenta> cuentas = new ArrayList<>();
+
+    private Cuenta cuenta = new Cuenta();
+
+    private RegistroUsuarioController stage1;
+    private boolean aceptado = true;
+    private CuentasDAO modelAccount = new CuentasDAO();
+
+
+=======
     
      private ArrayList<Cuenta> cuentas = new ArrayList<>();
      RegistroUsuarioController stage1;
@@ -83,6 +128,7 @@ public class RegistroUsuarioController implements Initializable{
    
     
    
+>>>>>>> main
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cleanFields();
@@ -107,6 +153,19 @@ public class RegistroUsuarioController implements Initializable{
         
           if(btnRegistrar.equals(evt)){
         
+<<<<<<< HEAD
+            if((!txtNombreUsuario.getText().isEmpty()) &&
+                    (!txtNumDocumento.getText().isEmpty()) &&
+                    (!txtCorreo.getText().isEmpty()) &&
+                    (!txtConfirmPassword.getText().isEmpty()) &&
+                    (!txtPassword.getText().isEmpty())) {
+                
+                if(cuenta.validateEmail(txtCorreo.getText())) {
+                    
+                    if(txtNombreUsuario.getText().length()>=5) {
+
+                            if(txtConfirmPassword.getText().equals(txtPassword.getText())) {
+=======
             if(!txtNombreUsuario.getText().isEmpty() && !txtNumDocumento.getText().isEmpty() && !txtCorreo.getText().isEmpty() &&
                !txtConfirmPassword.getText().isEmpty() && !txtPassword.getText().isEmpty()){
                 
@@ -115,16 +174,30 @@ public class RegistroUsuarioController implements Initializable{
                     if(txtNombreUsuario.getText().length()>=3){
 
                             if(txtConfirmPassword.getText().equals(txtPassword.getText())){
+>>>>>>> main
 
                                 Cuenta account = new Cuenta();
                                 account.setEmail(txtCorreo.getText());
                                 account.setPassword(txtPassword.getText());
                                 account.setUser(txtNombreUsuario.getText());
+<<<<<<< HEAD
+                                account.setTipoDoc(cbTipoDocumento.getSelectionModel().
+                                        getSelectedItem());
+
+                                try{
+
+                                account.setDocument(Integer.valueOf(txtNumDocumento.getText()));
+                                aceptado = true;
+
+                                }catch(NumberFormatException e){
+
+=======
                                 account.setTipoDoc(cbTipoDocumento.getSelectionModel().getSelectedItem());
                                 try{
                                 account.setDocument(Integer.valueOf(txtNumDocumento.getText()));
                                 aceptado = true;
                                 }catch(NumberFormatException e){
+>>>>>>> main
                                     Alert alert = new Alert(Alert.AlertType.ERROR);
                                     alert.setHeaderText(null);
                                     alert.setTitle("ERROR");
@@ -133,11 +206,20 @@ public class RegistroUsuarioController implements Initializable{
                                     aceptado = false;
                                   
                                 }
+<<<<<<< HEAD
+
+                                cuentas.add(account);
+                                
+                                if((modelAccount.insertAccount(account)) &&
+                                        (InsertarCuenta(cuentas)) &&
+                                        (aceptado == true)) {
+=======
                                 
                                
                                 cuentas.add(account);
                                 
                                 if(modelAccount.insertAccount(account) && InsertarCuenta(cuentas) && aceptado == true){
+>>>>>>> main
                                     
                                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                                     alert.setHeaderText(null);
@@ -147,8 +229,12 @@ public class RegistroUsuarioController implements Initializable{
                                   
                                     cleanFields();
 
+<<<<<<< HEAD
+                                }else {
+=======
 
                                 }else{
+>>>>>>> main
 
                                     Alert alert = new Alert(Alert.AlertType.ERROR);
                                     alert.setHeaderText(null);
@@ -158,8 +244,13 @@ public class RegistroUsuarioController implements Initializable{
 
                                 }
 
+<<<<<<< HEAD
+                            }else {
+                                    Alert alert = new Alert(Alert.AlertType.ERROR);
+=======
                             }else{
                                 Alert alert = new Alert(Alert.AlertType.ERROR);
+>>>>>>> main
                                     alert.setHeaderText(null);
                                     alert.setTitle("ERROR");
                                     alert.setContentText("Las contraseñas no coinciden, por favor verifique e intente nuevamente");
@@ -167,26 +258,46 @@ public class RegistroUsuarioController implements Initializable{
 
                             }
                         
+<<<<<<< HEAD
+                      }else {
+=======
                       }else{
+>>>>>>> main
                        
                                     Alert alert = new Alert(Alert.AlertType.ERROR);
                                     alert.setHeaderText(null);
                                     alert.setTitle("ERROR");
+<<<<<<< HEAD
+                                    alert.setContentText("El Nombre de usuario debe contener al menos CINCO caracteres");
+                                    alert.showAndWait();           
+                    }
+                    
+                }else {
+=======
                                     alert.setContentText("El Nombre de usuario debe contener al menos TRES caracteres");
                                     alert.showAndWait();           
                     }
                     
                 }else{
+>>>>>>> main
                     
                                     Alert alert = new Alert(Alert.AlertType.ERROR);
                                     alert.setHeaderText(null);
                                     alert.setTitle("ERROR");
                                     alert.setContentText("El Email que ha ingresado no es valido");
+<<<<<<< HEAD
+                                    alert.showAndWait();
+                }
+                                
+            }else {
+
+=======
                                     alert.showAndWait();  
                     
                 }
                                 
             }else{
+>>>>>>> main
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("ERROR");
@@ -194,6 +305,26 @@ public class RegistroUsuarioController implements Initializable{
                 alert.showAndWait(); 
                
             }      
+<<<<<<< HEAD
+
+        }else if(btnLimpiarReg.equals(evt)){        
+            cleanFields();      
+        }
+
+    }
+
+    @FXML
+    public void mostrarContraseña(PasswordField pass, TextField text,
+                                  CheckBox check){
+
+        text.setVisible(false);
+        text.setManaged(false);
+        text.managedProperty().bind(check.selectedProperty());
+        text.visibleProperty().bind(check.selectedProperty());
+        text.textProperty().bindBidirectional(pass.textProperty());
+
+    }
+=======
              
 
                                 
@@ -209,11 +340,34 @@ public class RegistroUsuarioController implements Initializable{
 
 
 
+>>>>>>> main
 
     @FXML
     private void CleanEvent(ActionEvent event) {
         cleanFields();
     }
+<<<<<<< HEAD
+
+    public void cleanFields(){
+        txtCorreo.setText("");
+        txtPassword.setText("");
+        txtConfirmPassword.setText("");
+        txtNombreUsuario.setText("");
+        txtNumDocumento.setText("");
+        if(cbTipoDocumento.getItems().size()>0){
+            cbTipoDocumento.getSelectionModel().select(0);
+        }else{
+            cbTipoDocumento.setItems(FXCollections.observableArrayList("Cedula de Ciudadania","Cedula de Extranjeria","Pasaporte"));
+            this.cbTipoDocumento.setVisible(true);
+        }
+    }
+
+    public boolean InsertarCuenta(ArrayList<Cuenta> cuentas){
+        
+         boolean insertado = false;
+
+        try {
+=======
     
     public static boolean validateEmail(String email) {
         String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
@@ -225,21 +379,39 @@ public class RegistroUsuarioController implements Initializable{
          boolean insertado = false;
          
            try {
+>>>>>>> main
             //Crear un objeto File se encarga de crear o abrir acceso a un archivo que se especifica en su constructor
             File archivo = new File("cuentas.txt");
 
             //Crear objeto FileWriter que sera el que nos ayude a escribir sobre archivo
             FileWriter escribir = new FileWriter(archivo, true);
+<<<<<<< HEAD
+
+            for (int i = 0; i < cuentas.size(); i++) {
+                escribir.write(cuentas.get(i) + "\n");
+            }
+
+            insertado = true;
+            escribir.close();
+
+=======
             for(int i = 0; i < cuentas.size(); i++ )
             {
                  escribir.write(cuentas.get(i) + "\n");
             }
            insertado = true;
             escribir.close();
+>>>>>>> main
         } catch (IOException e) {
             System.out.println("No se puedo escribir en el archivo!");
             insertado = false;
         }
+<<<<<<< HEAD
+
+        return insertado;
+    }
+
+=======
         
         
         return insertado;
@@ -259,4 +431,5 @@ public class RegistroUsuarioController implements Initializable{
     
     
     
+>>>>>>> main
 }

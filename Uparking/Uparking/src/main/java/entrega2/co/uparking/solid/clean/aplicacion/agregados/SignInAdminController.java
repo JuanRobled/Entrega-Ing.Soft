@@ -57,7 +57,11 @@ public class SignInAdminController {
                         alert.setContentText("¡BIENVENIDO!");
                         alert.showAndWait();
 
+<<<<<<< HEAD
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/entrega1/view/MenuAdmin.fxml"));
+=======
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("/entrega1/view/RegisterValet.fxml"));
+>>>>>>> main
                         Scene scene = new Scene(loader.load());
                         Stage stage = new Stage();
                         stage.setScene(scene);

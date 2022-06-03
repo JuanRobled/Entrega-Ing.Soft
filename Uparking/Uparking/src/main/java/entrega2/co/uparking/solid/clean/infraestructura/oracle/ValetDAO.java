@@ -2,6 +2,10 @@ package entrega2.co.uparking.solid.clean.infraestructura.oracle;
 
 import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IValetDAO;
 import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
+<<<<<<< HEAD
+import javafx.scene.control.Alert;
+=======
+>>>>>>> main
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -28,6 +32,12 @@ public class ValetDAO implements IValetDAO {
             pst.setString(5, valet.getExperience());
             state = pst.executeUpdate() > 0;
 
+<<<<<<< HEAD
+        } catch (SQLIntegrityConstraintViolationException ex)
+        {
+            System.err.println("¡No se pudo agregar a la base de datos!");
+=======
+>>>>>>> main
         } catch (SQLException ex) {
             System.out.println("Error de conexion:" + ex.toString());
             ex.printStackTrace();
@@ -65,4 +75,29 @@ public class ValetDAO implements IValetDAO {
         }
         return valets;
     }
+<<<<<<< HEAD
+
+
+    public boolean deleteValet(int id) {
+        String SQL = "DELETE FROM VALETS WHERE ID = ?";
+        try (
+                Connection conex = DriverManager.getConnection(
+                        ConnectionDB.getInstance().encrip.getThinconn(),
+                        ConnectionDB.getInstance().encrip.getUser(),
+                        ConnectionDB.getInstance().encrip.getPassword());
+                PreparedStatement pst = conex.prepareStatement(SQL);) {
+
+            pst.setInt(1, id);
+            pst.executeQuery();
+
+        } catch (SQLException ex) {
+            System.out.println("Error de conexion:" + ex.toString());
+            ex.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+=======
+>>>>>>> main
 }

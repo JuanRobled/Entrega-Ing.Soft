@@ -1,5 +1,10 @@
 package entrega2.co.uparking.solid.clean.entidades.entities;
 
+<<<<<<< HEAD
+import java.util.Random;
+
+=======
+>>>>>>> main
 public class ValetParking {
 
 
@@ -11,9 +16,31 @@ public class ValetParking {
     private String experience;
     private String state;
 
+<<<<<<< HEAD
+    private int keyEnter;
+
     public ValetParking() {
     }
 
+    public ValetParking(String name, String typeDoc, long numDoc, int age, String experience) {
+        this.name = name;
+        this.typeDoc = typeDoc;
+        this.numDoc = numDoc;
+        this.age = age;
+        this.experience = experience;
+    }
+
+    public int generateEnterKey(){
+        keyEnter = 3535;
+
+        return keyEnter;
+    }
+
+=======
+    public ValetParking() {
+    }
+
+>>>>>>> main
     public int getId() {
         return id;
     }
@@ -70,6 +97,14 @@ public class ValetParking {
         this.state = state;
     }
 
+<<<<<<< HEAD
+    public int getKeyEnter() {
+        return keyEnter;
+    }
+
+    public void setKeyEnter(int keyEnter) {
+        this.keyEnter = keyEnter;
+=======
     @Override
     public String toString() {
         return "ValetParking{" +
@@ -80,5 +115,6 @@ public class ValetParking {
                 ", experience='" + experience + '\'' +
                 ", state='" + state + '\'' +
                 '}';
+>>>>>>> main
     }
 }

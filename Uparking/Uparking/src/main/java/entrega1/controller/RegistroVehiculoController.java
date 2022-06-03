@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
+>>>>>>> main
 package entrega1.controller;
 
 import java.io.File;
@@ -25,9 +28,16 @@ import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
+<<<<<<< HEAD
+ *Manage the register of a vehicle in a system
+ * @author Juan Esteban Urquijo
+ */
+
+=======
  *
  * @author User
  */
+>>>>>>> main
 public class RegistroVehiculoController implements Initializable {
 
     @FXML
@@ -67,7 +77,12 @@ public class RegistroVehiculoController implements Initializable {
         if(cbTipoVeh.getItems().size()>0){
             cbTipoVeh.getSelectionModel().select(0);            
         }else{
+<<<<<<< HEAD
+            cbTipoVeh.setItems(FXCollections.observableArrayList(
+                    "Carro", "Moto","Van"));
+=======
             cbTipoVeh.setItems(FXCollections.observableArrayList("Carro","Moto","Van"));
+>>>>>>> main
             this.cbTipoVeh.setVisible(true);
         }                
     }
@@ -94,12 +109,23 @@ public class RegistroVehiculoController implements Initializable {
         
           if(btnRegVeh.equals(evt)){
         
+<<<<<<< HEAD
+            if((!txtPropietario.getText().isEmpty()) &&
+                    (!txtPlaca.getText().isEmpty()) &&
+                    (!txtModelo.getText().isEmpty()) &&
+                    (!txtAnio.getText().isEmpty()) &&
+                    (!txtMarca.getText().isEmpty()) &&
+                    (!txtColor.getText().isEmpty())) {
+
+                    if(txtPropietario.getText().length()>=5) {
+=======
             if(!txtPropietario.getText().isEmpty() && !txtPlaca.getText().isEmpty() && !txtModelo.getText().isEmpty() &&
                !txtAnio.getText().isEmpty() && !txtMarca.getText().isEmpty() && !txtColor.getText().isEmpty()){
                 
                     
                     if(txtPropietario.getText().length()>=3){
 
+>>>>>>> main
 
                                 Vehiculo vehiculo = new Vehiculo();
                                 vehiculo.setPropietrario(txtPropietario.getText());
@@ -109,10 +135,20 @@ public class RegistroVehiculoController implements Initializable {
                                 vehiculo.setMarca(txtMarca.getText());
                                 vehiculo.setColor(txtColor.getText());
                                 
+<<<<<<< HEAD
+                                try {
+
+                                vehiculo.setAnio(Integer.valueOf(txtAnio.getText()));
+                                aceptado = true;
+
+                                }catch(NumberFormatException e){
+
+=======
                                 try{
                                 vehiculo.setAnio(Integer.valueOf(txtAnio.getText()));
                                 aceptado = true;
                                 }catch(NumberFormatException e){
+>>>>>>> main
                                     Alert alert = new Alert(Alert.AlertType.ERROR);
                                     alert.setHeaderText(null);
                                     alert.setTitle("ERROR");
@@ -121,6 +157,10 @@ public class RegistroVehiculoController implements Initializable {
                                     aceptado = false;
                                   
                                 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
                                 vehiculos.add(vehiculo);
                                 
                                 if(InsertarVehiculo(vehiculos) && aceptado == true){
@@ -128,7 +168,12 @@ public class RegistroVehiculoController implements Initializable {
                                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                                     alert.setHeaderText(null);
                                     alert.setTitle("OPERACIÓN ÉXITOSA");
+<<<<<<< HEAD
+                                    alert.setContentText("El vehículo ha sido registrado" +
+                                            " de manera éxitosa");
+=======
                                     alert.setContentText("El vehículo ha sido registrado de manera éxitosa");
+>>>>>>> main
                                     alert.showAndWait();
                                   
                                     cleanFields();
@@ -148,7 +193,12 @@ public class RegistroVehiculoController implements Initializable {
                                     Alert alert = new Alert(Alert.AlertType.ERROR);
                                     alert.setHeaderText(null);
                                     alert.setTitle("ERROR");
+<<<<<<< HEAD
+                                    alert.setContentText("El Nombre de propietario debe contener" +
+                                            " al menos CINCO caracteres");
+=======
                                     alert.setContentText("El Nombre de propietario debe contener al menos TRES caracteres");
+>>>>>>> main
                                     alert.showAndWait();           
                     }
                     
@@ -169,14 +219,22 @@ public class RegistroVehiculoController implements Initializable {
           
         
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
     @FXML
     private void CleanEvent(ActionEvent event) {
         cleanFields();
     }
+<<<<<<< HEAD
+
+    public boolean InsertarVehiculo(ArrayList<Vehiculo> vehiculos) {
+=======
     
     
     public boolean InsertarVehiculo(ArrayList<Vehiculo> vehiculos){
+>>>>>>> main
         
         boolean insertado = false;
         
