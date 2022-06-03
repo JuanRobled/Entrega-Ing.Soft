@@ -17,7 +17,7 @@ public class GenerateReceipt implements IPayment {
     public boolean generateDocument(Cuenta user) throws Exception {
         try (PDDocument factura = new PDDocument()) {
 
-            Date fechaActual = new Date();
+            Date fechaActual = newDate();
             Calendar fecha = Calendar.getInstance();
             PDPage page = new PDPage(PDRectangle.A6);
             factura.addPage(page);
