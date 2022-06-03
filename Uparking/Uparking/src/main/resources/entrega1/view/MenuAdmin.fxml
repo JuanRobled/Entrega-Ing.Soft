@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D9CFCE;" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entrega2.co.uparking.solid.clean.aplicacion.agregados.MenuAdminController">
+   <children>
+      <Label layoutX="246.0" layoutY="63.0" text="Menu Admin">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="216.0" layoutY="125.0" text="Seleccione la opción que desea:" />
+      <Button fx:id="btnRegisterValet" layoutX="253.0" layoutY="200.0" mnemonicParsing="false" onAction="#registerValet" style="-fx-background-color: #44A42C;" text="Registrar Valet" textFill="WHITE" />
+      <Button fx:id="btnDeleteValet" layoutX="253.0" layoutY="244.0" mnemonicParsing="false" onAction="#DeleteValet" style="-fx-background-color: #CA5F52;" text="Eliminar Valet" textFill="WHITE" />
+   </children>
+</AnchorPane>

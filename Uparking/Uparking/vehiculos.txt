@@ -1,0 +1,15 @@
+Juan,Moto,null,null,0,null,null
+Juan,Moto,null,null,0,null,null
+Juan,Moto,null,null,0,null,null
+null,null,null,null,0,null,null
+null,null,null,null,0,null,null
+null,null,null,null,0,null,null
+null,null,null,null,0,null,null
+Juan,Moto,ACB123,F14,2005,Honda,Negro
+Juan,Moto,ACB123,F14,2005,Honda,Negro
+Juan,Moto,ACB123,F14,2005,Honda,Negro
+Juan,Moto,ACB123,F14,2005,Honda,Negro
+Juan,Moto,ACB123,F14,2005,Honda,Negro
+Juan,Moto,ACB123,F14,2005,Honda,Negro
+Juan,Moto,ACB123,F14,2005,Honda,Negro
+Juan,Moto,ACB123,F14,2005,Honda,Negro
