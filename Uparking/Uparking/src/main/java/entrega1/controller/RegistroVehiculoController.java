@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
->>>>>>> main
 package entrega1.controller;
 
 import java.io.File;
@@ -28,16 +21,10 @@ import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
-<<<<<<< HEAD
  *Manage the register of a vehicle in a system
  * @author Juan Esteban Urquijo
  */
 
-=======
- *
- * @author User
- */
->>>>>>> main
 public class RegistroVehiculoController implements Initializable {
 
     @FXML
@@ -60,11 +47,11 @@ public class RegistroVehiculoController implements Initializable {
     private Button btnRegVeh;
     @FXML
     private Button btnLimpiarReg;
-    
+
     private ArrayList<Vehiculo> vehiculos = new ArrayList<>();
-    
+
     RegistroUsuarioController controlador2;
-  
+
     private boolean aceptado = true;
 
     public void cleanFields(){
@@ -75,28 +62,24 @@ public class RegistroVehiculoController implements Initializable {
         txtMarca.setText("");
         txtColor.setText("");
         if(cbTipoVeh.getItems().size()>0){
-            cbTipoVeh.getSelectionModel().select(0);            
+            cbTipoVeh.getSelectionModel().select(0);
         }else{
-<<<<<<< HEAD
             cbTipoVeh.setItems(FXCollections.observableArrayList(
                     "Carro", "Moto","Van"));
-=======
-            cbTipoVeh.setItems(FXCollections.observableArrayList("Carro","Moto","Van"));
->>>>>>> main
             this.cbTipoVeh.setVisible(true);
-        }                
+        }
     }
-    
-    
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cleanFields();
-    }    
+    }
 
     @FXML
     private void KeyEvent(KeyEvent event) {
-         String c = event.getCharacter();
-        
+        String c = event.getCharacter();
+
         if(c.equalsIgnoreCase(" ")){
             event.consume();
         }
@@ -104,12 +87,11 @@ public class RegistroVehiculoController implements Initializable {
 
     @FXML
     private void RegisterEvent(ActionEvent event) throws IOException {
-        
+
         Object evt = event.getSource();
-        
-          if(btnRegVeh.equals(evt)){
-        
-<<<<<<< HEAD
+
+        if(btnRegVeh.equals(evt)){
+
             if((!txtPropietario.getText().isEmpty()) &&
                     (!txtPlaca.getText().isEmpty()) &&
                     (!txtModelo.getText().isEmpty()) &&
@@ -117,135 +99,99 @@ public class RegistroVehiculoController implements Initializable {
                     (!txtMarca.getText().isEmpty()) &&
                     (!txtColor.getText().isEmpty())) {
 
-                    if(txtPropietario.getText().length()>=5) {
-=======
-            if(!txtPropietario.getText().isEmpty() && !txtPlaca.getText().isEmpty() && !txtModelo.getText().isEmpty() &&
-               !txtAnio.getText().isEmpty() && !txtMarca.getText().isEmpty() && !txtColor.getText().isEmpty()){
-                
-                    
-                    if(txtPropietario.getText().length()>=3){
+                if(txtPropietario.getText().length()>=5) {
 
->>>>>>> main
+                    Vehiculo vehiculo = new Vehiculo();
+                    vehiculo.setPropietrario(txtPropietario.getText());
+                    vehiculo.setTipoVeh(cbTipoVeh.getSelectionModel().getSelectedItem());
+                    vehiculo.setPlaca(txtPlaca.getText());
+                    vehiculo.setModelo(txtModelo.getText());
+                    vehiculo.setMarca(txtMarca.getText());
+                    vehiculo.setColor(txtColor.getText());
 
-                                Vehiculo vehiculo = new Vehiculo();
-                                vehiculo.setPropietrario(txtPropietario.getText());
-                                vehiculo.setTipoVeh(cbTipoVeh.getSelectionModel().getSelectedItem());
-                                vehiculo.setPlaca(txtPlaca.getText());
-                                vehiculo.setModelo(txtModelo.getText());
-                                vehiculo.setMarca(txtMarca.getText());
-                                vehiculo.setColor(txtColor.getText());
-                                
-<<<<<<< HEAD
-                                try {
+                    try {
 
-                                vehiculo.setAnio(Integer.valueOf(txtAnio.getText()));
-                                aceptado = true;
+                        vehiculo.setAnio(Integer.valueOf(txtAnio.getText()));
+                        aceptado = true;
 
-                                }catch(NumberFormatException e){
+                    }catch(NumberFormatException e){
 
-=======
-                                try{
-                                vehiculo.setAnio(Integer.valueOf(txtAnio.getText()));
-                                aceptado = true;
-                                }catch(NumberFormatException e){
->>>>>>> main
-                                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                                    alert.setHeaderText(null);
-                                    alert.setTitle("ERROR");
-                                    alert.setContentText("El año no es válido");
-                                    alert.showAndWait();
-                                    aceptado = false;
-                                  
-                                }
-<<<<<<< HEAD
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setHeaderText(null);
+                        alert.setTitle("ERROR");
+                        alert.setContentText("El año no es válido");
+                        alert.showAndWait();
+                        aceptado = false;
 
-=======
->>>>>>> main
-                                vehiculos.add(vehiculo);
-                                
-                                if(InsertarVehiculo(vehiculos) && aceptado == true){
-                                    
-                                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                                    alert.setHeaderText(null);
-                                    alert.setTitle("OPERACIÓN ÉXITOSA");
-<<<<<<< HEAD
-                                    alert.setContentText("El vehículo ha sido registrado" +
-                                            " de manera éxitosa");
-=======
-                                    alert.setContentText("El vehículo ha sido registrado de manera éxitosa");
->>>>>>> main
-                                    alert.showAndWait();
-                                  
-                                    cleanFields();
-
-                                }else{
-
-                                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                                    alert.setHeaderText(null);
-                                    alert.setTitle("ERROR");
-                                    alert.setContentText("No se pudo agregar el vehiculo!");
-                                    alert.showAndWait();
-
-                                }
-
-                      }else{
-                       
-                                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                                    alert.setHeaderText(null);
-                                    alert.setTitle("ERROR");
-<<<<<<< HEAD
-                                    alert.setContentText("El Nombre de propietario debe contener" +
-                                            " al menos CINCO caracteres");
-=======
-                                    alert.setContentText("El Nombre de propietario debe contener al menos TRES caracteres");
->>>>>>> main
-                                    alert.showAndWait();           
                     }
-                    
-                                
+
+                    vehiculos.add(vehiculo);
+
+                    if(InsertarVehiculo(vehiculos) && aceptado == true){
+
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setHeaderText(null);
+                        alert.setTitle("OPERACIÓN ÉXITOSA");
+                        alert.setContentText("El vehículo ha sido registrado" +
+                                " de manera éxitosa");
+                        alert.showAndWait();
+
+                        cleanFields();
+
+                    }else{
+
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setHeaderText(null);
+                        alert.setTitle("ERROR");
+                        alert.setContentText("No se pudo agregar el vehiculo!");
+                        alert.showAndWait();
+
+                    }
+
+                }else{
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText(null);
+                    alert.setTitle("ERROR");
+                    alert.setContentText("El Nombre de propietario debe contener" +
+                            " al menos CINCO caracteres");
+                    alert.showAndWait();
+                }
+
+
             }else{
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("ERROR");
                 alert.setContentText("Debe llenar todos los campos obligatorios");
-                alert.showAndWait(); 
-               
-            }
-            
-    
-        }else if(btnLimpiarReg.equals(evt)){        
-            cleanFields();        
-        }
-          
-        
-    }
-<<<<<<< HEAD
-=======
+                alert.showAndWait();
 
->>>>>>> main
+            }
+
+
+        }else if(btnLimpiarReg.equals(evt)){
+            cleanFields();
+        }
+
+
+    }
     @FXML
     private void CleanEvent(ActionEvent event) {
         cleanFields();
     }
-<<<<<<< HEAD
 
     public boolean InsertarVehiculo(ArrayList<Vehiculo> vehiculos) {
-=======
-    
-    
-    public boolean InsertarVehiculo(ArrayList<Vehiculo> vehiculos){
->>>>>>> main
-        
+
         boolean insertado = false;
-        
-           try {
-       
+
+        try {
+
             File archivo = new File("vehiculos.txt");
             FileWriter escribir = new FileWriter(archivo, true);
-            
+
             for(int i = 0; i < vehiculos.size(); i++ )
             {
-                 escribir.write(vehiculos.get(i) + "\n");
+                escribir.write(vehiculos.get(i) + "\n");
             }
             insertado = true;
             escribir.close();
@@ -253,10 +199,10 @@ public class RegistroVehiculoController implements Initializable {
             System.out.println("No se puedo escribir en el archivo!");
             insertado = false;
         }
-        
+
         return insertado;
     }
-    
+
     public void recibirParametros(RegistroUsuarioController controller, String texto) {
         txtPropietario.setText(texto);
         controlador2 = controller;

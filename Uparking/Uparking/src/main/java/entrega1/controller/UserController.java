@@ -6,50 +6,41 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-<<<<<<< HEAD
 import javafx.scene.Scene;
-=======
->>>>>>> main
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.fxml.Initializable;
-<<<<<<< HEAD
 import javafx.stage.Stage;
 
 public class UserController implements Initializable{
 
     public Button btnAdmin;
-=======
-
-public class UserController implements Initializable{
-
->>>>>>> main
     @FXML
     private Button btnSesion, btnRegistrarse;
-    
+
     @FXML
     private StackPane containerForm;
-    
+
     private VBox sesionForm;
     @FXML
-    private VBox registroForm; 
-    
+    private VBox registroForm;
+
     @FXML
     public void actionEvent(ActionEvent e){
-        
+
         Object evt = e.getSource();
-        
+
         if(evt.equals(btnSesion)){
             sesionForm.setVisible(true);
-            registroForm.setVisible(false);                    
+            registroForm.setVisible(false);
         }else if(evt.equals(btnRegistrarse)){
-            registroForm.setVisible(true);                                
+            registroForm.setVisible(true);
             sesionForm.setVisible(false);
         }
-        
+
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -60,15 +51,14 @@ public class UserController implements Initializable{
             sesionForm.setVisible(true);
             registroForm.setVisible(false);
         } catch (IOException ex) {
-             System.err.println("¡Error!");
+            System.err.println("¡Error!");
         }
-        
-    }    
-    
-<<<<<<< HEAD
+
+    }
+
     @FXML
-    private VBox loadForm(String url) throws IOException{    
-        return (VBox) FXMLLoader.load(getClass().getResource(url));    
+    private VBox loadForm(String url) throws IOException{
+        return (VBox) FXMLLoader.load(getClass().getResource(url));
     }
 
     @FXML
@@ -80,11 +70,4 @@ public class UserController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-=======
-   
-    private VBox loadForm(String url) throws IOException{    
-        return (VBox) FXMLLoader.load(getClass().getResource(url));    
-    }
-    
->>>>>>> main
 }

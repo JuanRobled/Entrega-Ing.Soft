@@ -1,18 +1,8 @@
 package entrega2.co.uparking.solid.clean.aplicacion.agregados;
 
-<<<<<<< HEAD
-import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IAdminDAO;
-import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IValetDAO;
 import entrega2.co.uparking.solid.clean.entidades.entities.Administrator;
 import entrega2.co.uparking.solid.clean.entidades.entities.AssignValet;
 import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
-import entrega2.co.uparking.solid.clean.infraestructura.oracle.AdminDAO;
-import entrega2.co.uparking.solid.clean.infraestructura.oracle.ValetDAO;
-=======
-import entrega2.co.uparking.solid.clean.entidades.entities.Administrator;
-import entrega2.co.uparking.solid.clean.entidades.entities.AssignValet;
-import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
->>>>>>> main
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,12 +14,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
-<<<<<<< HEAD
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
-=======
->>>>>>> main
 import java.util.ResourceBundle;
 
 public class AdministratorController implements Initializable {
@@ -43,16 +29,11 @@ public class AdministratorController implements Initializable {
     public Button btnLeave;
 
     private boolean accepted = false;
-<<<<<<< HEAD
     private boolean exists = false;
 
     List<ValetParking> listValets = new ArrayList<>();
 
     private final Administrator manageValet = new Administrator();
-=======
-
-    private final Administrator valets = new Administrator();
->>>>>>> main
     private final AssignValet assign = new AssignValet();
 
     @Override
@@ -67,113 +48,80 @@ public class AdministratorController implements Initializable {
             if(!txtValetName.getText().isEmpty() && !txtDocNum.getText().isEmpty() && !txtAge.getText().isEmpty() &&
                     !txtExp.getText().isEmpty()){
 
-<<<<<<< HEAD
-                    if(txtValetName.getText().length()>=10 && txtValetName.getText().length()<=20){
+                if(txtValetName.getText().length()>=10 && txtValetName.getText().length()<=20){
 
-                        listValets = manageValet.checkAccount();
+                    listValets = manageValet.checkAccount();
 
-                        if (listValets != null) {
+                    if (listValets != null) {
 
-                            for (ValetParking c : listValets) {
-                                if (String.valueOf(c.getNumDoc()).equals(txtDocNum.getText())) {
-                                    exists = true;
-                                    break;
-                                }else {
-                                    exists = false;
-                                }
-                            }
-                        }
-
-                        if(exists){
-                            Alert alert = new Alert(Alert.AlertType.ERROR);
-                            alert.setHeaderText(null);
-                            alert.setTitle("OPERACIÓN FALLIDA");
-                            alert.setContentText("Ya se ha registrado un valet con ese documento");
-                            alert.showAndWait();
-
-                        }
-=======
-                    if(txtValetName.getText().length()>=10){
->>>>>>> main
-
-                            ValetParking valet = new ValetParking();
-                            valet.setName(txtValetName.getText());
-                            valet.setAge(Integer.valueOf(txtAge.getText()));
-                            valet.setExperience(txtExp.getText());
-                            valet.setTypeDoc(cbTypeDoc.getSelectionModel().getSelectedItem());
-                            try{
-                                valet.setNumDoc(Long.valueOf(txtDocNum.getText()));
-                                accepted = true;
-                            }catch(NumberFormatException e){
-                                Alert alert = new Alert(Alert.AlertType.ERROR);
-                                alert.setHeaderText(null);
-                                alert.setTitle("ERROR");
-                                alert.setContentText("El número de documento no es válido");
-                                alert.showAndWait();
-                                accepted = false;
-
-                            }
-
-<<<<<<< HEAD
-
-                             assign.getValets().add(valet);
-
-
-                        if (manageValet.insertValet(valet) && accepted) {
-
-                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                            alert.setHeaderText(null);
-                            alert.setTitle("OPERACIÓN ÉXITOSA");
-                            alert.setContentText("El valet ha sido registrado de manera éxitosa");
-                            alert.showAndWait();
-
-                            cleanFields();
-
-                        } else {
-
-                            Alert alert = new Alert(Alert.AlertType.ERROR);
-                            alert.setHeaderText(null);
-                            alert.setTitle("ERROR");
-                            alert.setContentText("No se pudo agregar el valet!");
-                            alert.showAndWait();
-                        }
-=======
-                             assign.getValets().add(valet);
-
-
-                            if(valets.insertValet(valet) && accepted){
-
-                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                                alert.setHeaderText(null);
-                                alert.setTitle("OPERACIÓN ÉXITOSA");
-                                alert.setContentText("El valet ha sido registrado de manera éxitosa");
-                                alert.showAndWait();
-
-                                cleanFields();
-
-
+                        for (ValetParking c : listValets) {
+                            if (String.valueOf(c.getNumDoc()).equals(txtDocNum.getText())) {
+                                exists = true;
+                                break;
                             }else {
-
-                                Alert alert = new Alert(Alert.AlertType.ERROR);
-                                alert.setHeaderText(null);
-                                alert.setTitle("ERROR");
-                                alert.setContentText("No se pudo agregar el valet!");
-                                alert.showAndWait();
+                                exists = false;
                             }
->>>>>>> main
+                        }
+                    }
 
-                    }else{
+                    if(exists){
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setHeaderText(null);
+                        alert.setTitle("OPERACIÓN FALLIDA");
+                        alert.setContentText("Ya se ha registrado un valet con ese documento");
+                        alert.showAndWait();
+
+                    }
+
+                    ValetParking valet = new ValetParking();
+                    valet.setName(txtValetName.getText());
+                    valet.setAge(Integer.valueOf(txtAge.getText()));
+                    valet.setExperience(txtExp.getText());
+                    valet.setTypeDoc(cbTypeDoc.getSelectionModel().getSelectedItem());
+                    try{
+                        valet.setNumDoc(Long.valueOf(txtDocNum.getText()));
+                        accepted = true;
+                    }catch(NumberFormatException e){
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setHeaderText(null);
+                        alert.setTitle("ERROR");
+                        alert.setContentText("El número de documento no es válido");
+                        alert.showAndWait();
+                        accepted = false;
+
+                    }
+
+
+                    assign.getValets().add(valet);
+
+
+                    if (manageValet.insertValet(valet) && accepted) {
+
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setHeaderText(null);
+                        alert.setTitle("OPERACIÓN ÉXITOSA");
+                        alert.setContentText("El valet ha sido registrado de manera éxitosa");
+                        alert.showAndWait();
+
+                        cleanFields();
+
+                    } else {
 
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setHeaderText(null);
                         alert.setTitle("ERROR");
-<<<<<<< HEAD
-                        alert.setContentText("El Nombre de usuario debe contener al menos veinte caracteres");
-=======
-                        alert.setContentText("El Nombre de usuario debe contener al menos quince caracteres");
->>>>>>> main
+                        alert.setContentText("No se pudo agregar el valet!");
                         alert.showAndWait();
                     }
+
+                }else{
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText(null);
+                    alert.setTitle("ERROR");
+                    alert.setContentText("El Nombre de usuario debe contener al menos veinte caracteres");
+                    alert.showAndWait();
+                }
 
             }else{
                 Alert alert = new Alert(Alert.AlertType.ERROR);

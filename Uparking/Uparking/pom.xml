@@ -60,21 +60,17 @@
         </dependency>
 
         <dependency>
-<<<<<<< HEAD
             <groupId>net.glxn</groupId>
             <artifactId>qrgen</artifactId>
             <version>1.4</version>
         </dependency>
 
         <dependency>
-=======
->>>>>>> main
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-<<<<<<< HEAD
 
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
@@ -83,8 +79,6 @@
             <type>jar</type>
         </dependency>
 
-=======
->>>>>>> main
     </dependencies>
 
     <build>

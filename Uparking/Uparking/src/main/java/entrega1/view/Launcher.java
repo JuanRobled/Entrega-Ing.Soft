@@ -5,11 +5,4 @@ public class Launcher {
         App.main(args);
     }
 }
-<<<<<<< HEAD
 
-
-
-
-
-=======
->>>>>>> main

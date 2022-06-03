@@ -87,14 +87,6 @@ public class Vehiculo {
         this.color = color;
     }
 
-    @Override
-    public String toString() {
-        return  propietrario + "," + tipoVeh + "," + placa + "," + modelo + "," + anio + "," + marca + "," + color;
-    }
-
-    
-    
-    
 
     
 }
