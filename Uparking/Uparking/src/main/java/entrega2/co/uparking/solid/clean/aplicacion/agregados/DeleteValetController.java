@@ -45,7 +45,7 @@ public class DeleteValetController implements Initializable {
         Subscriber idValet = new Subscriber(id);
         canal.subscribe(idValet);
         idValet.subscribeChannel(canal);
-        canal.upload("Valet Eliminado");
+        canal.upload("Valet Eliminado del sistema");
         updateView(event);
 
     }
